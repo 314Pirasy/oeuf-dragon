@@ -18,16 +18,28 @@ section a {
     color: rgb(176, 255, 255);
 }
 
-div, image, article {
+section {
+    display: flex;
+    justify-content: space-between;
+}
+
+div, article {
     border: $fontsizeMain/4 solid $borderColor;
+}
+
+div, .image, article {
     border-radius: $fontsizeMain;
     box-shadow: 4px 4px 10px black;
 }
 
-section {
-    display: flex;
-    justify-content: space-evenly;
+main, .image, .news {
+    margin: 3vh;
 }
+
+.image {
+    margin-left: 0;
+}
+
 
 header, main article, main div, nav, h1, h4, p {
     padding:2vw;
@@ -41,23 +53,21 @@ header, main article, main div, nav {
 
 .content {
     margin: 0;
+}
+
+.content, .news {
     background-color: $colorMain;
+}
+
+.news {
+    min-height: 120px;
+    width:60vw;
+    text-align: center;
+    font-size: $fontsizeMain*1.25;
+    line-height: 1.2em;
+    margin-right:0;
 }
 
 h1, h4, header p {
     text-align: center;
-}
-
-.image, .news, main {
-    margin: 3vh;
-}
-
-.news {
-    margin: 3vh;
-    min-height: 120px;
-    height:10vh;
-    width:40vw;
-    text-align: center;
-    font-size: $fontsizeMain*1.25;
-    line-height: 1.2em;
 }
