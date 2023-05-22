@@ -3,6 +3,19 @@ $borderColor: lighten($colorMain, 20%);
 $bgColor: lighten($colorMain, 5%);
 $fontsizeMain: 20px;
 
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+header button {
+    flex: 0;
+}
+
+header .content {
+    flex: 1;
+}
+
 body {
     background-image: url(images/pexels-cottonbro-studio-6715125.jpg);
     padding: 0;
@@ -29,7 +42,9 @@ div, article {
 
 div, .image, article {
     border-radius: $fontsizeMain;
-    box-shadow: 4px 4px 10px black;
+}
+div, .image, article, nav {
+    box-shadow: 12px 12px 6px rgba(0, 0, 0, 0.644);
 }
 
 main, .image, .news {

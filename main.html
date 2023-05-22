@@ -4,15 +4,21 @@
         <meta charset="utf-8">
         <title>L'Oeuf du Dragon</title>
         <link rel="stylesheet" href="main.css" type="text/css">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     </head>
     <body>
         <header>
+            <button class="btn" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+            </button>
             <div class="content">
                 <h1>L'Oeuf du Dragon : Site Officiel</h1>
-                <p>Le club de JDR de Lourdios Ichère</p>
+                <p>Le club de JDR de Lourdios-Ichère</p>
             </div>
         </header>
-        <nav>
+        <nav class="collapse" id="navbar">
             <ul>
                 <li>Accueil</li>
                 <li><a href="#">MDJ et jeux</a></li>
@@ -25,7 +31,7 @@
         <main>
             <article class="content">
                 <h4>A propos de nous</h4>
-                <p>Nous sommes un club amateur de JDR formé en 2013 par notre Maître du Jeu principal actuel, Albertine. Nous cherchons à réunir les joueurs de JDR de France pour tous pouvoir profiter de la magie collaborative du JDR ! </p>
+                <p>Nous sommes un club de JDR provenant de Lourdios-Ichère et de ses environs, formé en 2013 par notre Maître du Jeu principal actuel, Albertine. Nous cherchons à réunir les joueurs de JDR des Pyrénées-Atlantiques pour tous pouvoir profiter de la magie collaborative du JDR ! Nous effectuons des parties en ligne tous les vendredis, ainsi que des parties en présentiel tous les samedi et dimanche, à l'Auberge du Cerf Joyeux, Lourdios-Ichère.</p>
             </article>
             <section>
                 <img class="image" src="images/pexels-pixabay-208674.jpg" alt="">
@@ -46,5 +52,8 @@
                 </div>
             </section>
         </main>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>
