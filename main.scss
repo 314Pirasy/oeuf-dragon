@@ -1,25 +1,34 @@
 $colorMain: #593B32;
-$colorGold: rgb(255, 223, 80);
+$colorGold: rgb(255, 219, 60);
 $borderColor: lighten($colorMain, 20%);
 $bgColor: lighten($colorMain, 5%);
 $linkColor: rgb(176, 255, 255);
 $shadowColor: rgba(0, 0, 0, 0.644);
 
+body {
+    height: 100%;
+    max-height: 1400px;
+}
+
 header {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     box-shadow: 0px 0px 30px $shadowColor;
 }
 
-h1 {
-    color: $colorGold;
-    text-transform: uppercase;
+h1, h4 {
+    font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
-    font-size: 1.7rem;
 }
 
-header, main article, main div, nav {
+h1 {
+    color: $colorGold;
+    font-size: 2.3rem;
+}
+
+header, main article, main div, nav, footer {
     color: white;
     background-color: $bgColor;
 }
@@ -33,7 +42,19 @@ header .content, main {
 }
 
 html {
-    font-size: 20px;
+    font-size: 18px;
+}
+
+footer {
+    width:auto;
+    margin-bottom: 0;
+    margin-top: 4rem;
+    border-top: 0.25rem solid $borderColor;
+    height: auto;
+}
+
+footer p {
+    margin-bottom: 0;
 }
 
 body {
@@ -95,6 +116,8 @@ main, .image, .news {
 
 .image {
     margin-left: 0;
+    width: 25vw;
+    max-width: 200px;
 }
 
 
@@ -114,8 +137,8 @@ header, main article, main div, nav, h1, h4, p {
     min-height: 120px;
     width:60vw;
     text-align: center;
-    font-size: 1.25em;
-    line-height: 1.2em;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
     margin-right:0;
 }
 
@@ -123,19 +146,21 @@ h1, h4, header p {
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-    .pcOnly {
-        display: none;
-    }
+
+.pcOnly {
+    display: none;
 }
 
-@media screen and (min-width: 768px) {
+
+@media (min-width: 768px) {
+    .pcOnly {
+        display: block;
+    }
     html {
         font-size: 16px;
     }
     .megaFlex {
         display: flex;
-        justify-content: space-between;
     }
     .dropdown {
         display: none;
@@ -145,11 +170,25 @@ h1, h4, header p {
     }
     main {
         max-width: 70vw;
+        margin-left: auto;
+    }
+    nav {
+        min-width: 180px;
     }
 }
 
-@media screen and (min-width: 1100px) {
+@media (min-width: 1100px) {
     html {
         font-size: 20px;
+    }
+    nav {
+        min-width: 250px;
+        padding-right: 0;
+    }
+}
+
+@media (orientation: portrait) {
+    footer {
+        display: none;
     }
 }
