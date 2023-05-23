@@ -1,34 +1,52 @@
 $colorMain: #593B32;
+$colorGold: rgb(255, 223, 80);
 $borderColor: lighten($colorMain, 20%);
 $bgColor: lighten($colorMain, 5%);
-$fontsizeMain: 20px;
+$linkColor: rgb(176, 255, 255);
+$shadowColor: rgba(0, 0, 0, 0.644);
 
 header {
+    position: relative;
     display: flex;
     justify-content: space-around;
+    box-shadow: 0px 0px 30px $shadowColor;
 }
 
-header button {
+h1 {
+    color: $colorGold;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+header, main article, main div, nav {
+    color: white;
+    background-color: $bgColor;
+}
+
+header button, nav {
     flex: 0;
 }
 
-header .content {
+header .content, main {
     flex: 1;
+}
+
+html {
+    font-size: 20px;
 }
 
 body {
     background-image: url(images/pexels-cottonbro-studio-6715125.jpg);
-    padding: 0;
     margin: 0;
-    font-size: $fontsizeMain;
+}
+
+body {
+    padding: 0;
 }
 
 a {
-    text-decoration: none;
-}
-
-section a {
-    color: rgb(176, 255, 255);
+    color: $linkColor;
 }
 
 section {
@@ -36,15 +54,39 @@ section {
     justify-content: space-between;
 }
 
-div, article {
-    border: $fontsizeMain/4 solid $borderColor;
+main div, .content, article, nav {
+    border: 0.25em solid $borderColor;
 }
 
-div, .image, article {
-    border-radius: $fontsizeMain;
+nav {
+    border-top: none;
+    border-left: none;
+    font-size: 1.3rem;
 }
-div, .image, article, nav {
-    box-shadow: 12px 12px 6px rgba(0, 0, 0, 0.644);
+
+ul {
+    list-style: none;
+    padding: 0.5rem;
+}
+
+li {
+    margin: 0.5rem;
+}
+
+li.inactive {
+    color: grey;
+}
+
+main div, .content, .image, article {
+    border-radius: 1em;
+}
+main div, .image, .content, article, nav {
+    box-shadow: 12px 12px 6px $shadowColor;
+}
+
+.dropdown .responsive {
+    box-shadow: none;
+    border: 0;
 }
 
 main, .image, .news {
@@ -60,12 +102,6 @@ header, main article, main div, nav, h1, h4, p {
     padding:2vw;
 }
 
-
-header, main article, main div, nav {
-    color: white;
-    background-color: $bgColor;
-}
-
 .content {
     margin: 0;
 }
@@ -78,11 +114,42 @@ header, main article, main div, nav {
     min-height: 120px;
     width:60vw;
     text-align: center;
-    font-size: $fontsizeMain*1.25;
+    font-size: 1.25em;
     line-height: 1.2em;
     margin-right:0;
 }
 
 h1, h4, header p {
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .pcOnly {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+    .megaFlex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .dropdown {
+        display: none;
+    }
+    header {
+        background-color: $colorMain;
+    }
+    main {
+        max-width: 70vw;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    html {
+        font-size: 20px;
+    }
 }
