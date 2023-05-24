@@ -28,7 +28,7 @@ h1 {
     font-size: 2.3rem;
 }
 
-header, main article, main div, nav, footer {
+header, main article, .news, nav, footer {
     color: white;
     background-color: $bgColor;
 }
@@ -47,13 +47,12 @@ html {
 
 footer {
     width:auto;
-    margin-bottom: 0;
     margin-top: 4rem;
     border-top: 0.25rem solid $borderColor;
     height: auto;
 }
 
-footer p {
+footer, footer p {
     margin-bottom: 0;
 }
 
@@ -62,7 +61,7 @@ body {
     margin: 0;
 }
 
-body {
+body, ul {
     padding: 0;
 }
 
@@ -70,41 +69,25 @@ a {
     color: $linkColor;
 }
 
-section {
+.double {
     display: flex;
     justify-content: space-between;
 }
 
-main div, .content, article, nav {
+.news, .content, article, nav {
     border: 0.25em solid $borderColor;
 }
 
-nav {
-    border-top: none;
-    border-left: none;
-    font-size: 1.3rem;
+.pcOnly {
+    display: none;
 }
 
-ul {
-    list-style: none;
-    padding: 0.5rem;
-}
-
-li {
-    margin: 0.5rem;
-}
-
-li.inactive {
-    color: grey;
-}
-
-main div, .content, .image, article {
+.news, .content, .image, article {
     border-radius: 1em;
 }
-main div, .image, .content, article, nav {
-    box-shadow: 12px 12px 6px $shadowColor;
+.news, .image, .content, article, nav {
+    box-shadow: 10px 10px 6px $shadowColor;
 }
-
 .dropdown .responsive {
     box-shadow: none;
     border: 0;
@@ -121,7 +104,7 @@ main, .image, .news {
 }
 
 
-header, main article, main div, nav, h1, h4, p {
+header, main article, .news, nav, h1, h4, p {
     padding:2vw;
 }
 
@@ -129,26 +112,20 @@ header, main article, main div, nav, h1, h4, p {
     margin: 0;
 }
 
-.content, .news {
+.content, .news, nav li {
     background-color: $colorMain;
 }
 
 .news {
     min-height: 120px;
     width:60vw;
-    text-align: center;
     font-size: 1.1rem;
     line-height: 1.1rem;
     margin-right:0;
 }
 
-h1, h4, header p {
+h1, h4, header p, footer, .news {
     text-align: center;
-}
-
-
-.pcOnly {
-    display: none;
 }
 
 
@@ -156,6 +133,34 @@ h1, h4, header p {
     .pcOnly {
         display: block;
     }
+    
+    nav.pcOnly {
+        border-top: none;
+        border-left: none;
+        font-size: 1.3rem;
+        padding-left:0px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0px;
+    }
+
+    nav ul li {
+        padding: 0.2rem;
+        margin: 1rem 0.6rem 1rem 0.6rem;
+        text-align: center;
+        border: 0.2rem solid $borderColor;
+    }
+
+    li.inactive {
+        color: grey;
+    }
+
+    nav li {
+        box-shadow: 4px 4px 3px $shadowColor;
+    }
+
     html {
         font-size: 16px;
     }
@@ -164,9 +169,6 @@ h1, h4, header p {
     }
     .dropdown {
         display: none;
-    }
-    header {
-        background-color: $colorMain;
     }
     main {
         max-width: 70vw;
@@ -188,7 +190,11 @@ h1, h4, header p {
 }
 
 @media (orientation: portrait) {
+    .megaFlex {
+        margin-bottom: 0px;
+    }
     footer {
-        display: none;
+        display: block;
+        height: 90px;
     }
 }
