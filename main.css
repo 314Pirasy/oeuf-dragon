@@ -1,0 +1,182 @@
+body {
+  height: 100%;
+  max-height: 1400px;
+  margin: 0;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.644);
+}
+
+h1, h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
+}
+
+h1 {
+  color: rgb(255, 219, 60);
+  font-size: 2.3rem;
+}
+
+header, main article, .news, nav.pcOnly, footer {
+  color: white;
+  background-color: #69463b;
+}
+
+header button, nav.pcOnly {
+  flex: 0;
+}
+
+header .content, main {
+  flex: 1;
+}
+
+html {
+  font-size: 18px;
+}
+
+footer {
+  width: auto;
+  margin-top: 4rem;
+  border-top: 0.25rem solid #9a6657;
+  height: auto;
+}
+
+footer, footer p {
+  margin-bottom: 0;
+}
+
+body, ul {
+  padding: 0;
+}
+
+a {
+  color: rgb(176, 255, 255);
+}
+
+.double {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news, .content, article, nav.pcOnly {
+  border: 0.2em solid #9a6657;
+}
+
+.pcOnly {
+  display: none;
+}
+
+.news, .content, .image, article {
+  border-radius: 1em;
+}
+
+.news, .image, .content, article, nav.pcOnly {
+  box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.644);
+}
+
+.dropdown .responsive {
+  box-shadow: none;
+  border: 0;
+}
+
+main, .image, .news {
+  margin: 3vh;
+}
+
+.image {
+  margin-left: 0;
+  width: 25vw;
+  max-width: 200px;
+}
+
+header, main article, .news, nav.pcOnly, h1, h4, p {
+  padding: 2vw;
+}
+
+.content {
+  margin: 0;
+}
+
+.content, .news, nav.pcOnly li {
+  background-color: #593B32;
+}
+
+.news {
+  min-height: 120px;
+  width: 60vw;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  margin-right: 0;
+}
+
+h1, h4, header p, footer, .news {
+  text-align: center;
+}
+
+nav.breadcrumbNav {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+@media (min-width: 768px) {
+  .pcOnly {
+    display: block;
+  }
+  nav.pcOnly {
+    border-top: none;
+    border-left: none;
+    font-size: 1.3rem;
+    padding-left: 0px;
+  }
+  ul {
+    list-style: none;
+    padding: 0px;
+  }
+  nav.pcOnly ul li {
+    padding: 0.2rem;
+    margin: 1rem 0.6rem 1rem 0.6rem;
+    text-align: center;
+    border: 0.2rem solid #9a6657;
+  }
+  li.inactive {
+    color: grey;
+  }
+  nav.pcOnly li {
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.644);
+  }
+  html {
+    font-size: 16px;
+  }
+  .megaFlex {
+    display: flex;
+  }
+  .dropdown {
+    display: none;
+  }
+  main {
+    max-width: 70vw;
+    margin-left: auto;
+  }
+  nav.pcOnly {
+    min-width: 180px;
+  }
+}
+@media (min-width: 1100px) {
+  html {
+    font-size: 20px;
+  }
+  nav.pcOnly {
+    min-width: 250px;
+    padding-right: 0;
+  }
+}
+@media (orientation: portrait) {
+  .megaFlex {
+    margin-bottom: 0px;
+  }
+}/*# sourceMappingURL=main.css.map */

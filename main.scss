@@ -29,12 +29,12 @@ h1 {
     font-size: 2.3rem;
 }
 
-header, main article, .news, nav, footer {
+header, main article, .news, nav.pcOnly, footer {
     color: white;
     background-color: $bgColor;
 }
 
-header button, nav {
+header button, nav.pcOnly {
     flex: 0;
 }
 
@@ -70,8 +70,8 @@ a {
     justify-content: space-between;
 }
 
-.news, .content, article, nav {
-    border: 0.25em solid $borderColor;
+.news, .content, article, nav.pcOnly {
+    border: 0.2em solid $borderColor;
 }
 
 .pcOnly {
@@ -81,7 +81,7 @@ a {
 .news, .content, .image, article {
     border-radius: 1em;
 }
-.news, .image, .content, article, nav {
+.news, .image, .content, article, nav.pcOnly {
     box-shadow: 10px 10px 6px $shadowColor;
 }
 .dropdown .responsive {
@@ -100,7 +100,7 @@ main, .image, .news {
 }
 
 
-header, main article, .news, nav, h1, h4, p {
+header, main article, .news, nav.pcOnly, h1, h4, p {
     padding:2vw;
 }
 
@@ -108,7 +108,7 @@ header, main article, .news, nav, h1, h4, p {
     margin: 0;
 }
 
-.content, .news, nav li {
+.content, .news, nav.pcOnly li {
     background-color: $colorMain;
 }
 
@@ -122,6 +122,11 @@ header, main article, .news, nav, h1, h4, p {
 
 h1, h4, header p, footer, .news {
     text-align: center;
+}
+
+nav.breadcrumbNav {
+    margin-top: 2rem;
+    margin-left: 2rem;
 }
 
 
@@ -142,7 +147,7 @@ h1, h4, header p, footer, .news {
         padding: 0px;
     }
 
-    nav ul li {
+    nav.pcOnly ul li {
         padding: 0.2rem;
         margin: 1rem 0.6rem 1rem 0.6rem;
         text-align: center;
@@ -153,7 +158,7 @@ h1, h4, header p, footer, .news {
         color: grey;
     }
 
-    nav li {
+    nav.pcOnly li {
         box-shadow: 4px 4px 3px $shadowColor;
     }
 
@@ -170,7 +175,7 @@ h1, h4, header p, footer, .news {
         max-width: 70vw;
         margin-left: auto;
     }
-    nav {
+    nav.pcOnly {
         min-width: 180px;
     }
 }
@@ -179,7 +184,7 @@ h1, h4, header p, footer, .news {
     html {
         font-size: 20px;
     }
-    nav {
+    nav.pcOnly {
         min-width: 250px;
         padding-right: 0;
     }
@@ -188,9 +193,5 @@ h1, h4, header p, footer, .news {
 @media (orientation: portrait) {
     .megaFlex {
         margin-bottom: 0px;
-    }
-    footer {
-        display: block;
-        height: 90px;
     }
 }
