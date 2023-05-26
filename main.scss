@@ -1,5 +1,6 @@
-$colorMain: #593B32;
-$colorGold: rgb(255, 219, 60);
+$colorMain: #462f28;
+$colorSecondary: lighten($colorMain, 20%);
+$colorGold: rgb(255, 216, 108);
 $borderColor: lighten($colorMain, 20%);
 $bgColor: lighten($colorMain, 5%);
 $linkColor: rgb(176, 255, 255);
@@ -19,14 +20,21 @@ header {
     box-shadow: 0px 0px 30px $shadowColor;
 }
 
-h1, h4 {
+h1, h4, .card-title {
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
 }
 
+h1, .card-title {
+    font-size: 2.3rem;
+}
+
 h1 {
     color: $colorGold;
-    font-size: 2.3rem;
+}
+
+.card-title {
+    color: darken($colorGold, 20%);
 }
 
 header, main article, .news, nav.pcOnly, footer {
@@ -120,7 +128,7 @@ header, main article, .news, nav.pcOnly, h1, h4, p {
     margin-right:0;
 }
 
-h1, h4, header p, footer, .news {
+h1, h4, header p, footer, .news, .card-title, .card-subtitle {
     text-align: center;
 }
 
@@ -129,6 +137,16 @@ nav.breadcrumbNav {
     margin-left: 2rem;
 }
 
+.card {
+    background-color: rgb(253, 246, 237);
+    box-shadow: 1px 3px 5px $shadowColor;
+    max-width:250px;
+}
+
+.card-subtitle {
+    color:rgb(66, 65, 65);
+    font-size: 1rem;
+}
 
 @media (min-width: 768px) {
     .pcOnly {
@@ -190,8 +208,12 @@ nav.breadcrumbNav {
     }
 }
 
-@media (orientation: portrait) {
+@media (orientation: portrait) and (max-width: 360px) {
     .megaFlex {
         margin-bottom: 0px;
+    }
+    main {
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }

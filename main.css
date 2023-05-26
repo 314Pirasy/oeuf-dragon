@@ -12,19 +12,26 @@ header {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.644);
 }
 
-h1, h4 {
+h1, h4, .card-title {
   font-family: "Cormorant Garamond", serif;
   font-weight: bold;
 }
 
-h1 {
-  color: rgb(255, 219, 60);
+h1, .card-title {
   font-size: 2.3rem;
+}
+
+h1 {
+  color: rgb(255, 216, 108);
+}
+
+.card-title {
+  color: #ffbd06;
 }
 
 header, main article, .news, nav.pcOnly, footer {
   color: white;
-  background-color: #69463b;
+  background-color: #563a31;
 }
 
 header button, nav.pcOnly {
@@ -42,7 +49,7 @@ html {
 footer {
   width: auto;
   margin-top: 4rem;
-  border-top: 0.25rem solid #9a6657;
+  border-top: 0.25rem solid #875b4d;
   height: auto;
 }
 
@@ -64,7 +71,7 @@ a {
 }
 
 .news, .content, article, nav.pcOnly {
-  border: 0.2em solid #9a6657;
+  border: 0.2em solid #875b4d;
 }
 
 .pcOnly {
@@ -103,7 +110,7 @@ header, main article, .news, nav.pcOnly, h1, h4, p {
 }
 
 .content, .news, nav.pcOnly li {
-  background-color: #593B32;
+  background-color: #462f28;
 }
 
 .news {
@@ -114,13 +121,24 @@ header, main article, .news, nav.pcOnly, h1, h4, p {
   margin-right: 0;
 }
 
-h1, h4, header p, footer, .news {
+h1, h4, header p, footer, .news, .card-title, .card-subtitle {
   text-align: center;
 }
 
 nav.breadcrumbNav {
   margin-top: 2rem;
   margin-left: 2rem;
+}
+
+.card {
+  background-color: rgb(253, 246, 237);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.644);
+  max-width: 250px;
+}
+
+.card-subtitle {
+  color: rgb(66, 65, 65);
+  font-size: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -141,7 +159,7 @@ nav.breadcrumbNav {
     padding: 0.2rem;
     margin: 1rem 0.6rem 1rem 0.6rem;
     text-align: center;
-    border: 0.2rem solid #9a6657;
+    border: 0.2rem solid #875b4d;
   }
   li.inactive {
     color: grey;
@@ -175,8 +193,12 @@ nav.breadcrumbNav {
     padding-right: 0;
   }
 }
-@media (orientation: portrait) {
+@media (orientation: portrait) and (max-width: 360px) {
   .megaFlex {
     margin-bottom: 0px;
+  }
+  main {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }/*# sourceMappingURL=main.css.map */
