@@ -1,0 +1,55 @@
+body {
+  background-image: url(images/pexels-meruyert-gonullu-6243730.jpg);
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+}
+
+.grilleCustom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 90vw;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 80%;
+  height: 550px;
+}
+
+.card-text {
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+.content {
+  padding: 2vw;
+  max-height: 1200px;
+  overflow: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    max-height: 3000px;
+    overflow: hidden;
+  }
+  nav.pcOnly > ul {
+    position: fixed;
+    width: 180px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .card {
+    height: 600px;
+  }
+  nav.pcOnly > ul {
+    width: 250px;
+  }
+  footer {
+    margin-top: 0;
+  }
+  nav {
+    margin-bottom: 0;
+  }
+}/*# sourceMappingURL=secondary.css.map */
