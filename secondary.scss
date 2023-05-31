@@ -1,4 +1,4 @@
-
+@import 'main.scss';
 
 body {
     background-image: url(images/pexels-meruyert-gonullu-6243730.jpg);
@@ -27,18 +27,30 @@ body {
 
 .content {
     padding: 2vw;
-    max-height: 1200px;
-    overflow: auto;
 }
 
-@media screen and (min-width: 768px) {
-    .content {
-        max-height: 3000px;
-        overflow: hidden;
+.mobileOnly {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 631px) {
+    .mobileOnly {
+        display: none;
     }
+}
+
+@media screen and (min-width: 768px) and (max-width: 815px) {
     nav.pcOnly > ul {
         position: fixed;
         width: 180px;
+    }
+}
+
+@media screen and (min-width: 816px) {
+    nac.pcOnly > ul {
+        position: static;
     }
 }
 
@@ -54,5 +66,7 @@ body {
     }
     nav {
         margin-bottom: 0;
+        box-shadow: 10px 0px 6px $shadowColor;
+        border-bottom: none;
     }
 }
