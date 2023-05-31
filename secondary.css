@@ -263,7 +263,7 @@ body {
   footer {
     margin-top: 0;
   }
-  nav {
+  nav.pcOnly {
     margin-bottom: 0;
     box-shadow: 10px 0px 6px rgba(0, 0, 0, 0.644);
     border-bottom: none;
