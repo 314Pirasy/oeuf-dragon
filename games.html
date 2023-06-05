@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="secondary.css" type="text/css">
+        <link rel="stylesheet" href="animation.css" type="text/css">
     </head>
     <body>
         <header>
@@ -17,6 +18,12 @@
                 <h1>L'Oeuf du Dragon : Site Officiel</h1>
                 <p>Le club de JDR de Lourdios-Ichère</p>
             </div>
+            <nav aria-label="breadcrumb" class="breadcrumbNav">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="main.html">Accueil</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">MDJ et jeux</li>
+                </ol>
+              </nav>
             <div class="dropdown responsive">
                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <svg xmlns="http://www.w3.org/2000/svg" width="64" height="128" fill="white" class="bi bi-list" viewBox="0 0 16 16">
@@ -25,7 +32,7 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="main.html">Accueil</a>
-                  <a class="dropdown-item" href="#">Nouvelles</a>
+                  <a class="dropdown-item" href="news.html">Nouvelles</a>
                   <a class="dropdown-item" href="#">Règlement</a>
                   <a class="dropdown-item" href="#">Evènements</a>
                 </div>

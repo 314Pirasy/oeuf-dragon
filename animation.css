@@ -1,0 +1,13 @@
+@media screen and (min-width: 1100px) {
+  main .content {
+    animation: 0.5s ease-out 0s 1 moveForward;
+  }
+}
+@keyframes moveForward {
+  0% {
+    transform: translate3D(0, 100%, 0);
+  }
+  100% {
+    transform: translate3D(0, 0%, 0);
+  }
+}/*# sourceMappingURL=animation.css.map */
