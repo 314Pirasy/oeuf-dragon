@@ -193,16 +193,41 @@ nav.breadcrumbNav {
     }
     nav.pcOnly {
         min-width: 180px;
+        margin-right: 3rem;
+    }
+    main .content {
+        background: linear-gradient(130deg, lighten($colorMain, 20%), $colorMain);
     }
 }
 
-@media (min-width: 1100px) {
+@media screen and (min-width: 1100px) {
     html {
         font-size: 20px;
     }
     nav.pcOnly {
         min-width: 250px;
         padding-right: 0;
+        margin-right: 2rem;
+    }
+    .card {
+        height: 600px;
+    }
+    nav.pcOnly > ul {
+        width: 250px;
+    }
+    footer {
+        margin-top: 0;
+    }
+    nav.pcOnly {
+        margin-bottom: 0;
+        box-shadow: 10px 0px 6px $shadowColor;
+        border-bottom: none;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    nav.pcOnly {
+        margin-right: 5rem;
     }
 }
 
@@ -252,23 +277,5 @@ nav.breadcrumbNav {
 @media screen and (min-width: 816px) {
     nac.pcOnly > ul {
         position: static;
-    }
-}
-
-@media screen and (min-width: 1100px) {
-    .card {
-        height: 600px;
-    }
-    nav.pcOnly > ul {
-        width: 250px;
-    }
-    footer {
-        margin-top: 0;
-    }
-    nav.pcOnly {
-        margin-bottom: 0;
-        box-shadow: 10px 0px 6px $shadowColor;
-        border-bottom: none;
-        margin-right: 2rem;
     }
 }
