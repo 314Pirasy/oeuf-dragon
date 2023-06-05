@@ -142,6 +142,10 @@ nav.breadcrumbNav {
   font-size: 1rem;
 }
 
+.color-grey {
+  color: #575e64;
+}
+
 @media (min-width: 768px) {
   .pcOnly {
     display: block;
@@ -178,7 +182,7 @@ nav.breadcrumbNav {
     display: none;
   }
   main {
-    max-width: 70vw;
+    max-width: 80vw;
     margin-left: auto;
   }
   nav.pcOnly {
