@@ -26,10 +26,6 @@ h1, .card-title {
   font-size: 2.3rem;
 }
 
-h1 {
-  color: rgb(255, 216, 108);
-}
-
 .card-title {
   color: #ffbd06;
 }
@@ -68,6 +64,11 @@ body, ul {
 
 a {
   color: rgb(176, 255, 255);
+}
+
+h1 {
+  color: rgb(255, 216, 108);
+  text-decoration: none;
 }
 
 .double {
